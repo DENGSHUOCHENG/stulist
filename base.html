@@ -1,0 +1,32 @@
+<html>
+  <head>
+  <link rel="stylesheet" href="/static/css/zzsc.css" type="text/css" media="screen" />
+  <script type="text/javascript" src="/static/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/zzsc.js"></script>
+    <title>{% block title %}缺省标题{% end %}</title>
+    {% block js %}{% end %} 
+    <style type="text/css">
+body{background-image: url(/static/04bf799f896b5dc2.jpg)}
+</style>
+  </head>
+  <body>
+  <div style="position:absolute;left:400px;top:200px;">
+    <table border=1 width=600px height=200px bgcolor=#FFF5EE>
+      <tr style="height=100px;">
+        <td colspan=2><font style="font-family:'隶书';" size=6>学生管理系统</font></td> </tr>
+      <tr >
+        <td style='width:10em'>菜单
+        <ul>
+          <li><a href="/"><font color=#FF00FF>返回主页</font></a></li>
+          <li><a href="/coulist"><font color=#FF00FF>课程</font></a></li>
+        </ul>
+        </td>
+        <td>
+        {% block content %}
+        {% end %}          
+        </td>
+      </tr>
+    </table>
+    </div>
+  </body>
+</html>
